@@ -155,7 +155,6 @@
       color: @light-gray;
     }
 
-    &.string,
     &.parameters,
     &.array {
       color: @syntax-text-color;
@@ -180,7 +179,6 @@
   &.section.embedded {
     color: @dark-red;
   }
-
 }
 
 .support {
@@ -294,10 +292,20 @@
   }
 }
 
-.source.gfm .markup {
-  -webkit-font-smoothing: auto;
-  &.heading {
-    color: @red;
+.source.gfm {
+  .markup {
+    -webkit-font-smoothing: auto;
+    &.heading {
+      color: @red;
+    }
+
+    &.link {
+      color: @blue;
+    }
+  }
+
+  .link .entity {
+    color: @cyan;
   }
 }
 
